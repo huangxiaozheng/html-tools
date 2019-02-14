@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			div{
+				width:100px;
+				border:1px solid red;  
+				position:relative;
+			}
+			div:hover:after{
+				content:attr(data-msg);
+				position:absolute;
+				font-size: 12px;
+				width:200%;
+				line-height:30px;
+				text-align:center;
+				left:0;
+				top:25px;
+				border:1px solid green;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div data-msg="鼠标滑过显示你想显示的文字">hover</div>
+	</body>
+
+</html>

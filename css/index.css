@@ -1,0 +1,244 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+body {
+  background-color: whitesmoke;
+  font-family: PingFang;
+  color: #333333; }
+
+ul,
+ul li {
+  list-style: none; }
+
+h1,
+h2 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  font-weight: 600; }
+
+h3 {
+  font-weight: normal; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #333333;
+  font-size: 1.4rem; }
+
+button {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  background: none;
+  -webkit-tap-highlight-color: transparent; }
+
+.download {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 4vw; }
+  .download img {
+    width: 3rem;
+    height: 3rem; }
+  .download span {
+    flex: 1;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 1.4rem; }
+  .download .open {
+    color: #fff;
+    background-color: #ffcb00;
+    padding: .5rem 2rem;
+    border-radius: 2rem;
+    display: block; }
+
+.detail {
+  padding: 1.2rem 4vw;
+  background-color: #fff; }
+  .detail .detInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0; }
+    .detail .detInfo span {
+      font-size: 1.4rem; }
+    .detail .detInfo img {
+      width: 3.6rem;
+      height: 3.6rem;
+      border-radius: 50%; }
+    .detail .detInfo div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      line-height: 2rem;
+      flex: 1;
+      text-align: left;
+      padding-left: 1rem; }
+      .detail .detInfo div span:last-child {
+        color: #999999; }
+    .detail .detInfo a {
+      width: 6rem;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      border: 1px solid #e6e6e6;
+      border-radius: .3rem;
+      color: #ffb300;
+      display: block;
+      text-align: center; }
+  .detail .detCont {
+    line-height: 2rem;
+    height: 20rem;
+    overflow: hidden;
+    font-size: 1.4rem; }
+  .detail .onpen {
+    width: 100%;
+    padding: .8rem 0;
+    border-radius: 2rem;
+    background-color: #ffcb00;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin-top: 2.5rem; }
+  .detail .shade {
+    height: 10rem;
+    width: 100%;
+    position: absolute;
+    top: -8.6rem;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), white);
+    /* Safari 5.1 - 6.0 */ }
+  .detail .more {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    position: relative;
+    height: 0; }
+    .detail .more img {
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+      z-index: 99; }
+
+.title {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  padding: 0 4vw; }
+
+.title:before {
+  content: "";
+  width: 3px;
+  height: 1.2rem;
+  background-color: #ffb300;
+  display: block;
+  position: relative;
+  left: -1rem;
+  top: 1.5rem; }
+
+.video {
+  background-color: #fff;
+  margin-top: 1.2rem;
+  padding: 1.2rem 4vw; }
+  .video .vidoCont:not(:last-child) {
+    border-bottom: 1px solid #e6e6e6; }
+  .video .vidoCont {
+    display: flex;
+    flex-direction: row;
+    padding: 1.2rem 0;
+    font-size: 1.4rem; }
+    .video .vidoCont .vidoTitle {
+      display: -webkit-box !important;
+      -webkit-box-orient: vertical;
+      /* 控制行数 */
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      word-wrap: break-word;
+      word-break: break-all; }
+    .video .vidoCont div:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-right: 1rem;
+      flex: 1; }
+      .video .vidoCont div:first-child div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative; }
+        .video .vidoCont div:first-child div span {
+          font-size: 1.2rem; }
+        .video .vidoCont div:first-child div .time {
+          flex: 1;
+          text-align: left;
+          padding-left: 1rem; }
+        .video .vidoCont div:first-child div .look:before {
+          content: "";
+          background: url(../img/icon-mesg.png) no-repeat;
+          display: block;
+          background-size: contain;
+          width: 1.2rem;
+          height: 1.1rem;
+          position: absolute;
+          right: 3.5rem;
+          top: .4rem; }
+    .video .vidoCont .imgBox {
+      width: 40vw;
+      height: 25vw; }
+      .video .vidoCont .imgBox img {
+        width: 100%;
+        height: 100%; }
+
+.comment {
+  padding: 0 4vw;
+  background-color: #fff;
+  margin-top: 1.2rem; }
+  .comment .commtCont {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 0 1.2rem;
+    line-height: 2rem; }
+    .comment .commtCont .cont {
+      font-size: 1.4rem; }
+    .comment .commtCont .commtInfo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 1.2rem; }
+      .comment .commtCont .commtInfo .header {
+        display: flex;
+        flex-direction: row; }
+        .comment .commtCont .commtInfo .header span {
+          font-size: 1.4rem; }
+        .comment .commtCont .commtInfo .header div {
+          display: flex;
+          flex-direction: column;
+          padding-left: 1rem; }
+        .comment .commtCont .commtInfo .header img {
+          width: 3.6rem;
+          height: 3.6rem;
+          border-radius: 50%; }
+      .comment .commtCont .commtInfo .link {
+        display: flex;
+        flex-direction: row; }
+        .comment .commtCont .commtInfo .link img {
+          width: 1.2rem;
+          height: 1.1rem;
+          padding-top: .1rem; }
+        .comment .commtCont .commtInfo .link div {
+          line-height: 1.3rem;
+          padding: 0 .8rem; }
+        .comment .commtCont .commtInfo .link i {
+          background: url(../img/icon-likec.png) no-repeat;
+          width: 1.3rem;
+          height: 1.2rem;
+          background-size: contain; }
+
+/*# sourceMappingURL=index.css.map */
