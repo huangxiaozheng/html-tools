@@ -1,0 +1,56 @@
+*{
+	margin: 0;
+	padding:0;
+}
+/*去掉苹果机点击会闪烁效果*/
+html,body{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+html{
+	font-size: 62.3%;
+}
+body{
+	font-family: serif,sans-serif;
+	font-size: 1.3rem;
+}
+
+a,a:hover{
+	color: #666;
+	text-decoration: none;
+}
+
+ul,ul li{
+	list-style: none;
+}
+button, input, select, textarea{
+    /*border: none;*/
+    border:1px solid red;
+    outline: none;
+    /*用户是否可以自己调整元素的大小*/
+    resize: none;
+    border-radius: 0;
+    background: none;
+    /*box-shadow:0px 0px 0px rgba(0,0,0,0);*/
+    -webkit-appearance:none;
+    /*苹果手机点击高亮问题*/
+    -webkit-tap-highlight-color: transparent;
+    min-width: 1rem;
+    font-size: 1.4rem;
+}
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+        color: green;
+        font-size: 1.4rem;
+        text-align: center;
+}
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
