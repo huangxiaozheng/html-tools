@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>伪类和伪元素的使用</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html {
+				font-size: 62.5%;
+				overflow-x: hidden;
+				overflow-y: scroll;
+			}
+			
+			body {
+				background-color: #F5F5F5;
+				font-family: PingFang;
+				color: #333;
+			}
+			/*1、用css写实心三角形*/
+			.box1 {
+				background-color: #f5f5f5;
+				margin: 2rem;
+			}
+			
+			.box1:after {
+				content: '';
+				display: inline-block;
+				border-left: 0.7rem solid transparent;
+				border-right: 0.7rem solid transparent;
+				border-top: 0.7rem solid red;
+				transform: rotate(0deg);
+				-webkit-transform: rotate(0deg);
+				position: relative;
+				top: -1px;
+			}
+			
+			/*2、用css写各种方向的箭头*/
+			.answerBtn {
+				margin: 2rem;
+				background-color: #f02b2b;
+				border: none;
+				color: #FFFEFE;
+				height: 2.8rem;
+				font-size: 1.2rem;
+				padding: 0 1rem;
+				border-radius: 1.4rem;
+			}
+			
+			/*右箭头*/
+			/*.answerBtn:after {
+				content: '';
+				display: inline-block;
+				border-right: 1px solid #FFFEFE;
+				border-bottom: 1px solid #FFFEFE;
+				width: 0.6rem;
+				height: 0.6rem;
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);
+				position: relative;
+				left: .3rem;
+				top: -.3rem;
+				margin-left: .1rem;
+			}*/
+			
+			/*下箭头*/
+			.answerBtn:after {
+				content: '';
+				display: inline-block;
+				border-right: 1px solid #FFFEFE;
+				border-bottom: 1px solid #FFFEFE;
+				width: 0.6rem;
+				height: 0.6rem;
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				position: relative;
+				left: .3rem;
+				top: -.3rem;
+				margin-left: .1rem;
+			}
+			
+			/*上箭头*/
+			.answerBtn.active:after {
+				content: '';
+				display: inline-block;
+				border-right: 1px solid #FFFEFE;
+				border-bottom: 1px solid #FFFEFE;
+				width: 0.6rem;
+				height: 0.6rem;
+				transform: rotate(-135deg);
+				-webkit-transform: rotate(-135deg);
+				position: relative;
+				left: .3rem;
+				top: .1rem;
+				margin-left: .1rem;
+			}
+			
+			/*3、文字前面的竖线*/
+			.label{
+				color: #F02B2B;
+			    padding: 1rem 4vw;
+			    background-color: #FFFFFF;
+			}
+			.label:before{
+				content: '';
+			    width: 2px;
+			    height: 1rem;
+			    background-color: #F02B2B;
+			    display: inline-block;
+			    position: relative;
+			    top: 2px;
+			    margin-right: .5rem;
+			}
+			
+			/*4、鼠标滑过显示文字*/
+			.hover-word{
+				width:100px;
+				border:1px solid red;  
+				position:relative;
+			}
+			.hover-word:hover:after{
+				content:attr(data-msg);
+				position:absolute;
+				font-size: 12px;
+				width:200%;
+				line-height:30px;
+				text-align:center;
+				left:0;
+				top:25px;
+				border:1px solid green;
+				border-radius: 10px;
+			}
+			
+			/*5、用::selection来美化选中文本*/
+			::selection{
+			 color: #fff;
+			 background-color: #6bc30d;
+			}
+			/*6、用::first-letter来实现段落首字下沉*/
+			.first-word::first-letter{
+				  font-size: 6em;
+				  line-height: 1;
+				  float: left;
+			}
+			/*7、用::first-line来特殊标记段落第一行*/
+			.first-line::first-line{
+				 color: red
+			}
+		</style>
+	</head>
+
+	<body style="margin: 5rem;">
+		<!--用css写实心三角形-->
+		<div class="box1">123</div>
+		<!--2、用css写各种方向的箭头-->
+		<button class="answerBtn">查看回答</button>
+		<!--3、文字前面的竖线-->
+		<div class="label">我要开店</div>
+		<!--4、鼠标滑过显示文字-->
+		<div class="hover-word" data-msg="鼠标滑过显示你想显示的文字">hover</div>
+		<!--5、用::selection来美化选中文本-->
+		<div style="margin-top: 5rem;">
+			用::selection来美化选中文本
+			就像你用鼠标选中这段话看到的那样，::selection用来设置选中文本的样式，从而改变浏览器一成不变的文本选中色（蓝色）。
+		</div>
+		<!--6、用::first-letter来实现段落首字下沉-->
+		<div class="first-word" style="margin-top: 5rem;"> 
+		   <b>第</b>
+		   一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		    一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		     一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		      一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		       一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		        一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		          一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		    一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		     一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		      一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		       一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		        一个字请首字下沉 ： 设置段落的第一行第一字字体变大，并且向下一定的距离，与后面的段落对齐，段落的其它部分保持原样
+		</div>
+		
+		<!--7、用::first-line来特殊标记段落第一行-->
+		<div class="first-line" style="margin-top: 5rem;">
+			就如它的名字一样，这个伪元素代表了段落的第一行，你可以使用任意样式来控制它。
+			就如它的名字一样，这个伪元素代表了段落的第一行，你可以使用任意样式来控制它。
+			就如它的名字一样，这个伪元素代表了段落的第一行，你可以使用任意样式来控制它。
+			就如它的名字一样，这个伪元素代表了段落的第一行，你可以使用任意样式来控制它。
+			就如它的名字一样，这个伪元素代表了段落的第一行，你可以使用任意样式来控制它。
+			就如它的名字一样，这个伪元素代表了段落的第一行，你可以使用任意样式来控制它。
+		</div>
+	</body>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(".answerBtn").click(function() {
+			$(this).toggleClass('active')
+			$(this).parents(".answerList").find(".answerCont").slideToggle();
+		})
+	</script>
+
+</html>

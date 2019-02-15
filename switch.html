@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="smohan">
+	<meta name="homepage" content="https://smohan.im">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>switch</title>
+	<style type="text/css">
+		*,
+		*:before,
+		*:after {
+		  box-sizing: border-box;
+		}
+		
+		html {
+		  font-size: 16px;
+		  -webkit-tap-highlight-color: transparent;
+		  -ms-text-size-adjust: 100%;
+		  -webkit-text-size-adjust: 100%;
+		}
+		
+		body {
+		  font-family: "Pingfang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "WenQuanYi Micro Hei", sans-serif;
+		  font-size: 14px;
+		  line-height: 1.5;
+		  margin: 0;
+		  padding: 0;
+		  white-space: normal;
+		  color: #515151;
+		}
+		
+		
+		input[type='radio']:disabled,
+		input[type='checkbox']:disabled {
+		  cursor: not-allowed;
+		}
+		
+		
+		fieldset {
+		  min-width: 0;
+		  margin: 0;
+		  padding: 0;
+		  border: 0;
+		}
+		
+		label {
+		  display: inline-block;
+		  margin-bottom: .5rem;
+		}
+		 .mo-switch {
+		  position: relative;
+		  display: inline;
+		  margin: 0;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+		
+		 .mo-switch > .icon {
+		  position: absolute;
+		  top: 50%;
+		  left: 0;
+		  margin: 0;
+		  padding: 0;
+		  -webkit-transform: translate(0, -50%);
+		          transform: translate(0, -50%);
+		  border: 0.0625rem solid transparent;
+		  background-color: #fff;
+		}
+		
+		 .mo-switch > .icon:after {
+		  position: absolute;
+		  content: '';
+		}
+		
+		.mo-switch > .icon ~ span {
+		  margin-left: .5rem;
+		}
+		
+		 .mo-switch > input {
+		  position: absolute;
+		  z-index: -1;
+		  opacity: 0;
+		}
+		 .mo-switch > input ~ .icon, .mo-switch > input ~ span {
+		  cursor: pointer;
+		}
+		
+		.mo-switch {
+		  padding-left: 2.5rem;
+		}
+		
+		.mo-switch > .icon {
+		  width: 2.5rem;
+		  height: 1.5rem;
+		  border-radius: 1.5rem;
+		}
+		
+		.mo-switch > .icon:before {
+		  width: 2.375rem;
+		  height: 1.375rem;
+		  border-radius: 0.6875rem;
+		}
+		
+		.mo-switch > .icon:after {
+		  width: 1.375rem;
+		  height: 1.375rem;
+		}
+		
+		.mo-switch > input:checked ~ .icon:after {
+		  -webkit-transform: translateX(1rem);
+		          transform: translateX(1rem);
+		}
+		
+		.mo-switch > input:checked ~ .icon {
+		  border-color: #bdbdbd;
+		  background-color: #bdbdbd;
+		}
+		
+		.mo-switch > input:disabled ~ .icon,
+		.mo-switch > input:disabled ~ span, .mo-switch > input.disabled ~ .icon,
+		.mo-switch > input.disabled ~ span {
+		  opacity: 0.5;
+		  cursor: not-allowed;
+		}
+		
+		.mo-switch + .mo-switch {
+		  margin-left: 1rem;
+		}
+		
+		.mo-switch > .icon {
+		  border: 0.0625rem solid #dfdfdf;
+		  background-color: #dfdfdf;
+		  box-shadow: #fafafa 0 0 0 0 inset;
+		}
+		
+		.mo-switch > .icon:before, 
+		.mo-switch > .icon:after {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  content: '';
+		  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+		  transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+		  transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+		  transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1), -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+		}
+		
+		.mo-switch > .icon:before {
+		  background-color: #fdfdfd;
+		}
+		
+		.mo-switch > .icon:after {
+		  border-radius: 50%;
+		  background-color: #fff;
+		  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+		}
+		
+		.mo-switch > input:checked ~ .icon:before {
+		  -webkit-transform: scale(0);
+		          transform: scale(0);
+		}
+		
+		.mo-switch > input:active:not(:disabled):not(.disabled) ~ .icon {
+		  -webkit-transition: background-color .1s, border .1s;
+		  transition: background-color .1s, border .1s;
+		}
+		
+		.mo-switch > input:active:not(:disabled):not(.disabled) ~ .icon:after {
+		  -webkit-transform: scale(1.4, 1);
+		          transform: scale(1.4, 1);
+		}
+		
+		.mo-switch.mo-switch--primary > input:checked ~ .icon {
+		  border-color: #0275d8;
+		  background-color: #0275d8;
+		}
+		
+		.mo-switch.mo-switch--primary > input:disabled ~ .icon,
+		.mo-switch.mo-switch--primary > input:disabled ~ span, .mo-switch.mo-switch--primary > input.disabled ~ .icon,
+		.mo-switch.mo-switch--primary > input.disabled ~ span {
+		  opacity: 0.5;
+		  cursor: not-allowed;
+		}
+	</style>
+</head>
+<body style="margin: 2rem;">
+	<fieldset style="margin-bottom: 2rem;">
+		<label class="mo-switch mo-switch--primary">
+			<input type="checkbox" name="mo-switch--primary">
+			<i class="icon"></i>
+			<span>switch</span>
+		</label>
+		<label class="mo-switch mo-switch--primary">
+			<input type="checkbox" name="mo-switch--primary" checked>
+			<i class="icon"></i>
+			<span>switch</span>
+		</label>
+		<label class="mo-switch mo-switch--primary">
+			<input type="checkbox" name="mo-switch--primary" disabled>
+			<i class="icon"></i>
+			<span>switch</span>
+		</label>
+	</fieldset>	
+</body>
+</html>

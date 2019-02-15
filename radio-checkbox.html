@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>单选、复选</title>
+		<style type="text/css">
+			*,
+			*:before,
+			*:after {
+			  box-sizing: border-box;
+			}
+			
+			html {
+			  font-size: 16px;
+			  -webkit-tap-highlight-color: transparent;
+			  -ms-text-size-adjust: 100%;
+			  -webkit-text-size-adjust: 100%;
+			}
+			body {
+			  font-family: "Pingfang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "WenQuanYi Micro Hei", sans-serif;
+			  font-size: 14px;
+			  line-height: 1.5;
+			  margin: 0;
+			  padding: 0;
+			  white-space: normal;
+			  color: #515151;
+			}
+			/*1、单选按钮*/
+			.radio-container {
+			  	font-size: 0; 
+			}
+			  .radio-container .radio-beauty:hover, 
+			  .radio-container input[type="radio"]:checked + .radio-beauty {
+				    padding: 2px;
+				    background-color: green;
+				    /*规定背景的绘制区域:border-box:背景铺到边框；padding-box：背景铺到内边距；content-box：背景仅铺满内容本身*/
+				    background-clip: content-box;
+			}
+			  .radio-container .radio-name {
+				    vertical-align: middle;
+				    font-size: 16px; 
+			  }
+			    
+			    /*按钮大小，边框颜色*/
+			  .radio-container .radio-beauty {
+				    width: 18px;
+				    height: 18px;
+				    box-sizing: border-box;
+				    display: inline-block;
+				    border: 1px solid green;
+				    vertical-align: middle;
+				    margin: 0 3px 0 15px;
+				    border-radius: 50%; 
+			    }
+			    .radio-container .radio-beauty:hover {
+			       box-shadow: 0 0 7px green;
+			    }
+			    
+			    /*2、复选框*/
+			   fieldset {
+				  min-width: 0;
+				  margin: 0;
+				  padding: 0;
+				  border: 0;
+				  display: flex;
+				  flex-direction: row;
+				}
+				.mo-checkbox {
+				  position: relative;
+				  display: inline;
+				  margin: 0;
+				  -webkit-user-select: none;
+				 -moz-user-select: none;
+				  -ms-user-select: none;
+				  user-select: none;
+				}
+				/*复选框的位置和样式*/
+				.mo-checkbox > .icon {
+				  position: absolute;
+				  top: 50%;
+				  left: 0;
+				  margin: 0;
+				  padding: 0;
+				  -webkit-transform: translate(0, -50%);
+				          transform: translate(0, -50%);
+				  border: 0.0625rem solid transparent;
+				  border-radius: 0;
+				  background-color: #fff;
+				  width: 1.25rem;
+				  height: 1.25rem;
+				  border-color: #bdbdbd;
+				}
+				/*文字离复选框的距离*/
+				.mo-checkbox {
+				  padding-left: 1.25rem;
+				}
+				
+				.mo-checkbox > .icon ~ span{
+				  margin-left: .5rem;
+				}
+				
+				/*input输入框*/
+				.mo-checkbox > input {
+				  position: absolute;
+				  z-index: -1;
+				  opacity: 0;
+				}
+				/*~匹配选择器。选择所有在input后面的span .icon*/
+				/*鼠标经过的指针*/
+				.mo-checkbox > input ~ .icon,
+				.mo-checkbox > input ~ span{
+				  cursor: pointer;
+				}
+				
+				/*复选框里面的打勾*/
+				.mo-checkbox > .icon:after {
+				  position: absolute;
+				  content: '';
+				}
+				/*选中后打勾的颜色*/
+				.mo-checkbox > input[type="checkbox"]:checked ~ .icon:after {
+				  -webkit-transition: all 0.06s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+				  transition: all 0.06s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+				  border-left-color: gold;
+				  border-bottom-color: green;
+				}
+				
+				/*不能选择的选项背景透明度*/
+				.mo-checkbox > input[type="checkbox"]:disabled ~ .icon,
+				.mo-checkbox > input[type="checkbox"]:disabled ~ span, .mo-checkbox > input[type="checkbox"].disabled ~ .icon,
+				.mo-checkbox > input[type="checkbox"].disabled ~ span {
+				  opacity: 0.5;
+				  cursor: not-allowed;
+				}
+				/*选项之间的间隔*/
+				/*.mo-checkbox + .mo-checkbox {
+				  margin-left: 1rem;
+				}*/
+				
+				/*打钩的位置、大小*/
+				.mo-checkbox > .icon:after {
+				  top: 11.5%;
+				  left: 11.2%;
+				  width: 80%;
+				  height: 50%;
+				  -webkit-transform: rotate(-50deg);
+				          transform: rotate(-50deg);
+				  border: 0.125rem solid transparent;
+				  background-color: transparent;
+				}
+		</style>
+	</head>
+
+	<body style="margin: 2rem;">
+		<!--单选按钮-->
+		<div class="radio-container" style="margin-bottom: 2rem;">
+			<label>
+		       
+		        <input type="radio" checked="" name="radioName" id="radioName1" hidden/>
+	        	<label for="radioName1" class="radio-beauty"></label>
+	        	 <span class="radio-name">前端工程师</span>
+			</label>
+			
+			<label>
+		        
+		        <input type="radio" name="radioName" id="radioName2" hidden/>
+		        <label for="radioName2" class="radio-beauty"></label>
+		        <span class="radio-name">后端工程师</span>
+			</label>
+			
+			<label>
+		       
+		        <input type="radio" name="radioName" id="radioName3" hidden/>
+		        <label for="radioName3" class="radio-beauty"></label>
+		         <span class="radio-name">全栈工程师</span>
+			</label>
+		</div>
+		
+		<!--复选框-->
+		<form class="demo-form" onsubmit="return false">
+			<fieldset>
+				<label class="mo-checkbox">
+					<input type="checkbox" name="checkbox-default" checked>
+					<i class="icon"></i>
+					<span>mo-checkbox</span>
+				</label>
+				<label class="mo-checkbox">
+					<input type="checkbox" name="checkbox-default" >
+					<i class="icon"></i>
+					<span>mo-checkbox checked</span>
+				</label>
+				<label class="mo-checkbox">
+					<input type="checkbox" name="checkbox-default" >
+					<i class="icon"></i>
+					<span>mo-checkbox checked</span>
+				</label>
+				<label class="mo-checkbox">
+					<input type="checkbox" name="checkbox-default-disabled" disabled>
+					<i class="icon"></i>
+					<span>mo-checkbox disabled</span>
+				</label>
+				<label class="mo-checkbox">
+					<input type="checkbox" name="checkbox-default-disabled" checked disabled>
+					<i class="icon"></i>
+					<span>mo-checkbox disabled checked</span>
+				</label>
+			</fieldset>
+		</form>
+	</body>
+
+</html>
