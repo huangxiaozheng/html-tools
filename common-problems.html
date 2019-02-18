@@ -9,6 +9,7 @@
 			    margin: 0;
 			    padding: 0;
 			}
+			/*1、用font-size来清除间距*/
 			.items{
 			    font-size: 0;
 			}
@@ -26,6 +27,8 @@
 		</style>
 	</head>
 	<body>
+		<!--1、用font-size来清除间距-->
+		<!--inline-block的元素之间会受空白区域的影响，也就是元素之间差不多会有一个字符的间隙。如果在同一行内有4个25%相同宽度的元素，会导致最后一个元素掉下来-->
 		<div class="items">
 		  <div class="item">1</div>
 		  <div class="item">2</div>
