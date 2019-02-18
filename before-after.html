@@ -151,6 +151,19 @@
 			.first-line::first-line{
 				 color: red
 			}
+			/*8、利用（伪）元素和display:inline-block的方案在未知容器高度时实现垂直居中*/
+			/*参考：https://smohan.net/blog/farjdx*/
+			.box2{text-align: center; font-size: 0;}
+			  .box2::before,
+			  .box2 img{
+			  	 display: inline-block;
+			    vertical-align: middle;
+			    font-size: 14px;
+			  }
+			  .box2::before {
+			  	 content: '';
+			    height: 100%;
+			  }
 		</style>
 	</head>
 
@@ -193,6 +206,11 @@
 			就如它的名字一样，这个伪元素代表了段落的第一行，你可以使用任意样式来控制它。
 			就如它的名字一样，这个伪元素代表了段落的第一行，你可以使用任意样式来控制它。
 			就如它的名字一样，这个伪元素代表了段落的第一行，你可以使用任意样式来控制它。
+		</div>
+		
+		<!--8、利用（伪）元素和display:inline-block的方案在未知容器高度时实现垂直居中-->
+		<div class="box2">
+			<img src="img/img.png"/>
 		</div>
 	</body>
 	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
