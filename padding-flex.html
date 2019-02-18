@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>用垂直方向的padding来实现等比缩放的盒子</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			.goods-list {
+				padding: 1rem;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			
+			.goods-list .goods-item {
+				flex-basis: 25%;
+				padding: 1rem;
+			}
+			
+			.goods-list .goods-item>.goods-item-body {
+				border: 1px solid #ccc;
+			}
+			
+			.goods-list .goods-item>.goods-item-body>.thumbnail {
+				width: 100%;
+				/*图片父容器宽度100%，父容器的高度百分比为：100*3 / 4 = 75% ; 图片absolute并且完全铺满父容器。*/
+				padding-top: 75%;
+				position: relative;
+			}
+			
+			.goods-list .goods-item>.goods-item-body>.thumbnail>img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.goods-list .goods-item>.goods-item-body>.title {
+				padding: 1rem;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				font-size: 1rem;
+			}
+			
+			@media screen and (max-width: 1120px) {
+				.goods-list .goods-item {
+					flex-basis: 33.333%;
+				}
+			}
+			
+			@media screen and (max-width: 920px) {
+				.goods-list .goods-item {
+					flex-basis: 50%;
+				}
+			}
+			
+			@media screen and (max-width: 640px) {
+				.goods-list .goods-item {
+					flex-basis: 100%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--移动端的商品列表展示，每行显示两个商品，使用懒加载技术来加载商品的缩略图，需求规定了商品必须有序整齐的排列，并且加载时要使用默认图片来占位缩略图，在加载过程中，页面的高度不能有抖动。当然，缩略图是大小是UI固定了比例的，假设比例是4:3；此时，你可能的做法是给图片容器固定高度（图片可能会变形），或者使用JS，利用屏幕的宽度和图片比例计算出图片的高度（要用到JS，要考虑屏幕旋转后宽度的变化）。-->
+		<ul class="goods-list">
+			<li class="goods-item">
+				<div class="goods-item-body">
+					<figure class="thumbnail">
+						<img src="//via.placeholder.com/640x480">
+					</figure>
+					<h6 class="title">goods name</h6>
+				</div>
+			</li>
+			<li class="goods-item">
+				<div class="goods-item-body">
+					<figure class="thumbnail">
+						<img src="img/img.png">
+					</figure>
+					<h6 class="title">goods name</h6>
+				</div>
+			</li>
+			<li class="goods-item">
+				<div class="goods-item-body">
+					<figure class="thumbnail">
+						<img src="//via.placeholder.com/640x480">
+					</figure>
+					<h6 class="title">goods name</h6>
+				</div>
+			</li>
+			<li class="goods-item">
+				<div class="goods-item-body">
+					<figure class="thumbnail">
+						<img src="//via.placeholder.com/640x480">
+					</figure>
+					<h6 class="title">goods name</h6>
+				</div>
+			</li>
+			<li class="goods-item">
+				<div class="goods-item-body">
+					<figure class="thumbnail">
+						<img src="//via.placeholder.com/640x480">
+					</figure>
+					<h6 class="title">goods name</h6>
+				</div>
+			</li>
+			<li class="goods-item">
+				<div class="goods-item-body">
+					<figure class="thumbnail">
+						<img src="//via.placeholder.com/640x480">
+					</figure>
+					<h6 class="title">goods name</h6>
+				</div>
+			</li>
+			<li class="goods-item">
+				<div class="goods-item-body">
+					<figure class="thumbnail">
+						<img src="//via.placeholder.com/640x480">
+					</figure>
+					<h6 class="title">goods name</h6>
+				</div>
+			</li>
+			<li class="goods-item">
+				<div class="goods-item-body">
+					<figure class="thumbnail">
+						<img src="//via.placeholder.com/640x480">
+					</figure>
+					<h6 class="title">goods name</h6>
+				</div>
+			</li>
+		</ul>
+
+	</body>
+
+</html>
