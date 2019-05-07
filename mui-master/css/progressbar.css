@@ -1,0 +1,41 @@
+/*
+Error: Invalid GBK character "\xE9"
+        on line 47 of F:\project\mui-master\sass\progressbar.scss
+
+42: }
+43: body>.#{$namespace}progressbar{
+44:     position: absolute;
+45:     left: 0;
+46:     // top: 0;
+47:     top: $bar-base-height;//默认应该在title bar下方显示
+48:     z-index: z("max");
+49:     border-radius: 0;
+50: }
+51: // Animations
+52: .#{$namespace}progressbar-in {
+
+Backtrace:
+F:\project\mui-master\sass\progressbar.scss:47
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1323:in `rescue in block in find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1320:in `block in find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each_with_index'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:902:in `rescue in check_sass_encoding'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:898:in `check_sass_encoding'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:423:in `check_encoding!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:379:in `_to_tree'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+E:/Program Files/Koala/bin/sass:18:in `load'
+E:/Program Files/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE9\"\A         on line 47 of F:\project\mui-master\sass\progressbar.scss\A \A 42: }\A 43: body>.#{$namespace}progressbar{\A 44:     position: absolute;\A 45:     left: 0;\A 46:     // top: 0;\A 47:     top: $bar-base-height;//默认应该在title bar下方显示\A 48:     z-index: z(\"max\");\A 49:     border-radius: 0;\A 50: }\A 51: // Animations\A 52: .#{$namespace}progressbar-in {"; }

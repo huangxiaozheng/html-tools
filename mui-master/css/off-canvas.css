@@ -1,0 +1,39 @@
+/*
+Error: Invalid GBK character "\xE7"
+        on line 5 of F:\project\mui-master\sass\off-canvas.scss
+
+1: //.#{$namespace}android{
+2: .#{$namespace}off-canvas-wrap{
+3:     .#{$namespace}bar{//fix android
+4:        position: absolute!important;
+5:        @include transform(translate3d(0, 0, 0));//fix ios(offcanvas scalable的时候,bar会消失)
+6:        -webkit-box-shadow: none;
+7:        box-shadow: none;
+8:     }
+9:    } 
+10: //}
+
+Backtrace:
+F:\project\mui-master\sass\off-canvas.scss:5
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1323:in `rescue in block in find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1320:in `block in find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each_with_index'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:896:in `check_sass_encoding'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:423:in `check_encoding!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:379:in `_to_tree'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+E:/Program Files/Koala/bin/sass:18:in `load'
+E:/Program Files/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE7\"\A         on line 5 of F:\project\mui-master\sass\off-canvas.scss\A \A 1: //.#{$namespace}android{\A 2: .#{$namespace}off-canvas-wrap{\A 3:     .#{$namespace}bar{//fix android\A 4:        position: absolute!important;\A 5:        @include transform(translate3d(0, 0, 0));//fix ios(offcanvas scalable的时候,bar会消失)\A 6:        -webkit-box-shadow: none;\A 7:        box-shadow: none;\A 8:     }\A 9:    } \A 10: //}"; }

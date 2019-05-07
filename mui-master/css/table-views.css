@@ -1,0 +1,40 @@
+/*
+Error: Invalid GBK character "\xE9"
+        on line 17 of F:\project\mui-master\sass\table-views.scss
+
+12: //  border-color:#c8c7cc;
+13: //  border-width: 1px 0px 1px 0px;
+14: //  border-style: solid;
+15:     @include hairline(double, #c8c7cc, 0); // Double grey border.
+16:     &:before{
+17:         top:-1px;//cell 高亮时，保证边框仍旧可见
+18:     }
+19: 
+20: }
+21: //.#{$namespace}table-view-striped>li:nth-child(odd){
+22: //  background-color: #f9f9f9;
+
+Backtrace:
+F:\project\mui-master\sass\table-views.scss:17
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1323:in `rescue in block in find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1320:in `block in find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each_with_index'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:896:in `check_sass_encoding'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:423:in `check_encoding!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:379:in `_to_tree'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+E:/Program Files/Koala/bin/sass:18:in `load'
+E:/Program Files/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE9\"\A         on line 17 of F:\project\mui-master\sass\table-views.scss\A \A 12: //  border-color:#c8c7cc;\A 13: //  border-width: 1px 0px 1px 0px;\A 14: //  border-style: solid;\A 15:     @include hairline(double, #c8c7cc, 0); // Double grey border.\A 16:     &:before{\A 17:         top:-1px;//cell 高亮时，保证边框仍旧可见\A 18:     }\A 19: \A 20: }\A 21: //.#{$namespace}table-view-striped>li:nth-child(odd){\A 22: //  background-color: #f9f9f9;"; }

@@ -1,0 +1,55 @@
+/*
+Error: Undefined variable: "$namespace".
+        on line 1 of F:\project\mui-master\sass\grid.scss
+
+1: .#{$namespace}row {
+2:     @include clearfix();
+3: }
+4: .#{$namespace}col-xs-1, .#{$namespace}col-sm-1, .#{$namespace}col-xs-2, .#{$namespace}col-sm-2, .#{$namespace}col-xs-3, .#{$namespace}col-sm-3, .#{$namespace}col-xs-4, .#{$namespace}col-sm-4,  .#{$namespace}col-xs-5, .#{$namespace}col-sm-5, .#{$namespace}col-xs-6, .#{$namespace}col-sm-6, .#{$namespace}col-xs-7, .#{$namespace}col-sm-7, .#{$namespace}col-xs-8, .#{$namespace}col-sm-8, .#{$namespace}col-xs-9, .#{$namespace}col-sm-9, .#{$namespace}col-xs-10, .#{$namespace}col-sm-10,  .#{$namespace}col-xs-11, .#{$namespace}col-sm-11, .#{$namespace}col-xs-12, .#{$namespace}col-sm-12 {
+5:   position: relative;
+6:   min-height: 1px;
+
+Backtrace:
+F:\project\mui-master\sass\grid.scss:1
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/interpolation.rb:100:in `_perform'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:526:in `block in run_interp_no_strip'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:524:in `map'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:524:in `run_interp_no_strip'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:531:in `run_interp'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:399:in `visit_rule'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+E:/Program Files/Koala/bin/sass:18:in `load'
+E:/Program Files/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$namespace\".\A         on line 1 of F:\project\mui-master\sass\grid.scss\A \A 1: .#{$namespace}row {\A 2:     @include clearfix();\A 3: }\A 4: .#{$namespace}col-xs-1, .#{$namespace}col-sm-1, .#{$namespace}col-xs-2, .#{$namespace}col-sm-2, .#{$namespace}col-xs-3, .#{$namespace}col-sm-3, .#{$namespace}col-xs-4, .#{$namespace}col-sm-4,  .#{$namespace}col-xs-5, .#{$namespace}col-sm-5, .#{$namespace}col-xs-6, .#{$namespace}col-sm-6, .#{$namespace}col-xs-7, .#{$namespace}col-sm-7, .#{$namespace}col-xs-8, .#{$namespace}col-sm-8, .#{$namespace}col-xs-9, .#{$namespace}col-sm-9, .#{$namespace}col-xs-10, .#{$namespace}col-sm-10,  .#{$namespace}col-xs-11, .#{$namespace}col-sm-11, .#{$namespace}col-xs-12, .#{$namespace}col-sm-12 {\A 5:   position: relative;\A 6:   min-height: 1px;"; }

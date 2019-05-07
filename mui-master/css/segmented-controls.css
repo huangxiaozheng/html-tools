@@ -1,0 +1,40 @@
+/*
+Error: Invalid GBK character "\xE5"
+        on line 16 of F:\project\mui-master\sass\segmented-controls.scss
+
+11:     font-size: 15px;
+12:     font-weight: $font-weight-light;
+13:     background-color: transparent;
+14:     border: 1px solid $primary-color;
+15:     border-radius: 3px;
+16:     -webkit-touch-callout: none;//(iOS平台)分段选择禁止长按弹出菜单；
+17:     &.#{$namespace}segmented-control-vertical{
+18:         border-radius:0;
+19:         border-width: 0;
+20:         border-collapse: collapse;
+21:      .#{$namespace}control-item{
+
+Backtrace:
+F:\project\mui-master\sass\segmented-controls.scss:16
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1323:in `rescue in block in find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1320:in `block in find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each_with_index'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `find_encoding_error'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:896:in `check_sass_encoding'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:423:in `check_encoding!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:379:in `_to_tree'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+E:/Program Files/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+E:/Program Files/Koala/bin/sass:18:in `load'
+E:/Program Files/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE5\"\A         on line 16 of F:\project\mui-master\sass\segmented-controls.scss\A \A 11:     font-size: 15px;\A 12:     font-weight: $font-weight-light;\A 13:     background-color: transparent;\A 14:     border: 1px solid $primary-color;\A 15:     border-radius: 3px;\A 16:     -webkit-touch-callout: none;//(iOS平台)分段选择禁止长按弹出菜单；\A 17:     &.#{$namespace}segmented-control-vertical{\A 18:         border-radius:0;\A 19:         border-width: 0;\A 20:         border-collapse: collapse;\A 21:      .#{$namespace}control-item{"; }
